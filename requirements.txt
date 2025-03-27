@@ -1,27 +1,27 @@
 # Web Framework
-flask>=2.0.0,<3.0.0
-gunicorn>=20.0.0
-flask-wtf>=1.0.0
+flask==2.3.3
+gunicorn==21.2.0
+flask-wtf==1.1.1
 
 # Environment and Configuration
-python-dotenv>=0.19.0
+python-dotenv==1.0.0
 
-# Data Processing - use versions known to work on Vercel
-pandas>=1.5.0,<2.0.0
-numpy>=1.23.0,<1.25.0
+# Data Processing
+pandas==1.5.3
+numpy==1.24.3
 
-# Visualization - optional, can be removed if causing issues
-matplotlib>=3.5.0,<3.8.0
+# Visualization
+matplotlib==3.7.2
 
 # PDF Generation
-reportlab>=3.6.0,<4.1.0
+reportlab==4.0.4
 
 # Weather API
-requests>=2.25.0
+requests==2.31.0
 
 # Natural Language Processing
-nltk>=3.6.0
-regex>=2021.8.0
+nltk==3.8.1
+regex==2023.6.3
 
-# Testing (consider moving to a separate dev-requirements.txt)
-pytest>=7.0.0
+# Testing
+pytest==7.4.0
