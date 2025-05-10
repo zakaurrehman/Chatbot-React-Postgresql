@@ -1,0 +1,42 @@
+﻿# Core web framework
+Flask==2.3.3
+Werkzeug==2.3.7
+Jinja2==3.1.2
+itsdangerous==2.1.2
+click==8.1.7
+
+# Database connectivity
+psycopg2-binary==2.9.7
+SQLAlchemy==2.0.20
+
+# Environment variables and configuration
+python-dotenv==1.0.0
+
+# API and request handling
+Flask-RESTful==0.3.10
+requests==2.31.0
+urllib3==2.0.4
+
+
+# Natural Language Processing
+google-generativeai==0.3.1
+openai==0.28.0
+
+# Utility packages
+python-dateutil==2.8.2
+pytz==2023.3
+six==1.16.0
+
+# Logging and monitoring
+Logbook==1.5.3
+
+# Development and testing
+pytest==7.4.0
+black==23.7.0
+flake8==6.1.0
+
+# CORS support
+Flask-Cors==4.0.0
+
+# JSON handling
+simplejson==3.19.1

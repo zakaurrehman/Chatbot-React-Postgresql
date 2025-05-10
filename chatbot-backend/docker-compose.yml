@@ -1,0 +1,28 @@
+﻿# Docker Compose configuration
+version: '3.8'
+
+services:
+  chatbot:
+    build: .
+    container_name: construction-chatbot
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./logs:/app/logs
+      - ./.env:/app/.env
+    environment:
+      - FLASK_ENV=production
+      - FLASK_DEBUG=False
+    networks:
+      - chatbot-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+networks:
+  chatbot-network:
+    driver: bridge

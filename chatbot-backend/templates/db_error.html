@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Connection Error</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .error-container {
+            text-align: center;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+        }
+        .error-icon {
+            font-size: 4rem;
+            color: #dc3545;
+            margin-bottom: 1rem;
+        }
+        .error-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .connection-details {
+            text-align: left;
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-icon">
+            <i class="bi bi-database-x"></i>
+        </div>
+        <div class="error-title">Database Connection Error</div>
+        <p class="mb-4">Unable to connect to the PostgreSQL database. Please check your database configuration.</p>
+        
+        <div class="connection-details">
+            <h5>Connection Details:</h5>
+            <ul>
+                <li><strong>Host:</strong> {{ db_host }}</li>
+                <li><strong>Database:</strong> {{ db_name }}</li>
+                <li><strong>User:</strong> {{ db_user }}</li>
+                <li><strong>Port:</strong> {{ db_port }}</li>
+                <li><strong>SSL Mode:</strong> {{ db_sslmode }}</li>
+            </ul>
+        </div>
+        
+        <div class="alert alert-danger">
+            {{ error_message }}
+        </div>
+        
+        <p>Please check your database credentials in the .env file and ensure your database server is accessible.</p>
+        
+        <div class="mt-4">
+            <a href="/" class="btn btn-primary me-2">Try Again</a>
+            <button class="btn btn-outline-secondary" onclick="history.back()">Go Back</button>
+        </div>
+    </div>
+</body>
+</html>
